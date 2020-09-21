@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Todo list</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script defer src="js/script.js"></script>
+  </head>
+
+  <body>
+
+    <h1 class="title">ToDo-list</h1>
+
+    <div class="tasks">
+      <h2 class="tasks-title">Список дел</h2>
+      <ul class="task-list" info-list></ul>
+      <form action="" form-new-info-list>
+        <input 
+          type="text"
+          class="new list"new-info-list-input
+          placeholder="новый список дел"
+          aria-label="new list name"
+        />
+        <button class="button create" aria-label="create new list">+</button>
+      </form>
+    </div>
+
+    <div class="todo-list" info-list-display>
+      <div class="todo-header">
+        <h2 class="list-title" info-list-title>Название списка</h2>
+        <p class="task-count" count-of-info-lists>Количество невыполненных заданий</p>
+    </div>
+
+      <div class="todo-body">
+        <div class="tasks" info-tasks></div>
+        <div class="new-task-creator">
+            <form action="" new-info-task-form>
+                <input 
+                  type="text" new-info-task-input
+                  class="new task"
+                  placeholder="новое задание"
+                  aria-label="new task name"
+                />
+                <button class="button create" aria-label="create new task">+</button>
+              </form>
+        </div>
+        <div class="delete-stuff">
+          <button class="button delete" button-clear-complete-tasks>Удалить выполненные задания</button>
+          <button class="button delete" button-delete-list>Удалить список</button>
+        </div>
+      </div>
+    </div>
+   
+
+    <template id="task-template">
+      <div class="task">
+        <input type="checkbox" />
+        <label>
+          <span class="custom-checkbox"></span>
+        </label>
+      </div>
+    </template>
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Название не может быть пустым значением или иметь размер больше 30!</h2>
+    </div>
+  </div>
+
+  </body>
+</html>
